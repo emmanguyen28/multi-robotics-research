@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- define arguments to be used later -->
+  <!-- arg name="model" default="$(find robot_description)/urdf/romi.xacro"/-->
+  <arg name="gui" default="true"/>
+  <arg name="rvizconfig" default="$(find robot_description)/rviz/romi.rviz"/>
+
+	<!-- define parameters based on the arguments --> 
+  <param name="robot_description" textfile="$(find robot_description)/urdf/romi.sdf"/>
+  <!-- param name="use_gui" value="$(arg gui)"/--> 
+
+  <!-- control the robot joints via GUI, set use_gui = true to use it--> 
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+	<param name="use-gui" value="False"/> 
+  </node>
+
+  <!-- publish the joint_states to /tf tree, which allows rviz to obtain correct transformations for the robot -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+
+  <!-- launch rviz --> 
+	 <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+   
+</launch>

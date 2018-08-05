@@ -1,0 +1,547 @@
+<?xml version="1.0" ?>
+<robot name="Leader">
+
+  <joint name="chassis_JOINT_0" type="fixed">
+    <parent link="chassis"/>
+    <child link="link_0"/>
+    <origin rpy="0      -0.00805  0" xyz="1.10000000e-04   8.00000000e-05   1.49380000e-01"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+
+  <joint name="left_wheel_joint" type="revolute">
+    <parent link="chassis"/>
+    <child link="left_wheel"/>
+    <origin rpy="1.57  0    0" xyz="-0.0015   0.08377  0.035"/>
+    <axis xyz="0.00000000e+00   1.00000000e+00   7.90000000e-04"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="link_0_JOINT_0_0" type="fixed">
+    <parent link="link_0"/>
+    <child link="29"/>
+    <origin rpy="0      -0.00805 -3.14158" xyz="-0.08273  0.15782 -0.05442"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_0" type="fixed">
+    <parent link="link_0"/>
+    <child link="21"/>
+    <origin rpy="0      -0.00805 -3.14158" xyz="-0.09462 -0.15551 -0.05432"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_1_0" type="fixed">
+    <parent link="link_0"/>
+    <child link="22"/>
+    <origin rpy="0.00569  0.0057   0.78542" xyz="-0.0692  -0.21997 -0.05453"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_1_1" type="fixed">
+    <parent link="link_0"/>
+    <child link="30"/>
+    <origin rpy="0.00569  0.0057   0.78542" xyz="-0.05683  0.09679 -0.05463"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_2_0" type="fixed">
+    <parent link="link_0"/>
+    <child link="31"/>
+    <origin rpy="0.00805  0       1.5708" xyz="0.00358  0.07015 -0.05712"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_2" type="fixed">
+    <parent link="link_0"/>
+    <child link="23"/>
+    <origin rpy="0.00805  0       1.5708" xyz="-0.00569 -0.24769 -0.05504"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_3_0" type="fixed">
+    <parent link="link_0"/>
+    <child link="32"/>
+    <origin rpy="0.0057  -0.00569  2.35618" xyz="0.06727  0.09583 -0.05563"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_3" type="fixed">
+    <parent link="link_0"/>
+    <child link="24"/>
+    <origin rpy="0.0057  -0.00569  2.35618" xyz="0.05671 -0.21896 -0.05754"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_4_0" type="fixed">
+    <parent link="link_0"/>
+    <child link="33"/>
+    <origin rpy="0       0.00805  0" xyz="0.09223  0.15782 -0.05583"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_4" type="fixed">
+    <parent link="link_0"/>
+    <child link="25"/>
+    <origin rpy="0       0.00805  0" xyz="0.08423 -0.15717 -0.05576"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_5_0" type="fixed">
+    <parent link="link_0"/>
+    <child link="34"/>
+    <origin rpy="-0.00569 -0.0057  -2.35616" xyz="0.06777  0.2177  -0.05563"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_5" type="fixed">
+    <parent link="link_0"/>
+    <child link="26"/>
+    <origin rpy="-0.00569 -0.0057  -2.35616" xyz="0.0576  -0.0939  -0.05773"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_6_0" type="fixed">
+    <parent link="link_0"/>
+    <child link="35"/>
+    <origin rpy="-0.00805  0      -1.57079" xyz="0.00438  0.24515 -0.05712"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_6" type="fixed">
+    <parent link="link_0"/>
+    <child link="27"/>
+    <origin rpy="-0.00805  0      -1.57078" xyz="-0.00569 -0.06769 -0.05504"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_7_0" type="fixed">
+    <parent link="link_0"/>
+    <child link="36"/>
+    <origin rpy="-0.00575  0.00563 -0.7954" xyz="-0.05683  0.21986 -0.05463"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="link_0_JOINT_7" type="fixed">
+    <parent link="link_0"/>
+    <child link="28"/>
+    <origin rpy="-0.0057   0.00569 -0.7854" xyz="-0.07052 -0.09194 -0.05652"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="right_wheel_joint" type="revolute">
+    <parent link="chassis"/>
+    <child link="right_wheel"/>
+    <origin rpy="1.57  0    3.14" xyz="-0.0015  -0.08377  0.035"/>
+    <axis xyz="0.00000000e+00   1.00000000e+00   7.90000000e-04"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <link name="chassis">
+    <inertial>
+      <mass value="0.00251652"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.31e-06" ixy="0" ixz="0" iyy="0.00020976" iyz="0" izz="0.00021598"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="-0.0015  0      0.027"/>
+      <geometry>
+        <box size="0.164 0.164 0.014559"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="-0.0015  0      0.027"/>
+      <geometry>
+        <box size="0.164 0.164 0.014559"/>
+      </geometry>
+    </visual>
+	<collision name='front_caster_collision'>
+      <origin rpy="0  0  0" xyz="-0.05199 0 0.012"/>
+      <geometry>
+        <sphere radius="0.012151"/>
+      </geometry>
+    </collision>
+
+    <visual name='front_caster_visual'>
+      <origin rpy="0  0  0" xyz="-0.05199 0 0.012"/>
+      <geometry>
+        <sphere radius="0.012151"/>
+      </geometry>
+    </visual>
+
+	<collision name='back_caster_collision'>
+      <origin rpy="0  0  0" xyz="0.05652 0 0.012"/>
+      <geometry>
+        <sphere radius="0.012151"/>
+      </geometry>
+    </collision>
+    <visual name='back_caster_visual'>
+      <origin rpy="0  0  0" xyz="0.05652 0 0.012"/>
+      <geometry>
+        <sphere radius="0.0121514"/>
+      </geometry>
+    </visual>																																																												
+
+  </link>
+  <link name="21">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_21/meshes/Leader_ID_21.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_21/meshes/Leader_ID_21.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="22">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_22/meshes/Leader_ID_22.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_22/meshes/Leader_ID_22.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="23">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_23/meshes/Leader_ID_23.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_23/meshes/Leader_ID_23.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="24">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_24/meshes/Leader_ID_24.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_24/meshes/Leader_ID_24.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="25">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_25/meshes/Leader_ID_25.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_25/meshes/Leader_ID_25.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="26">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_26/meshes/Leader_ID_26.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_26/meshes/Leader_ID_26.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="27">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0.08917 -0.15633  0.0943"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_27/meshes/Leader_ID_27.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_27/meshes/Leader_ID_27.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="28">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_28/meshes/Leader_ID_28.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_28/meshes/Leader_ID_28.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="29">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_29/meshes/Leader_ID_29.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_29/meshes/Leader_ID_29.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="30">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_30/meshes/Leader_ID_30.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_30/meshes/Leader_ID_30.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="31">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_31/meshes/Leader_ID_31.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_31/meshes/Leader_ID_31.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="32">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_32/meshes/Leader_ID_32.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_32/meshes/Leader_ID_32.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="33">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_33/meshes/Leader_ID_33.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_33/meshes/Leader_ID_33.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="34">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_34/meshes/Leader_ID_34.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_34/meshes/Leader_ID_34.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="35">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_35/meshes/Leader_ID_35.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_35/meshes/Leader_ID_35.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="36">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_36/meshes/Leader_ID_36.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/leader_id_36/meshes/Leader_ID_36.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  
+  <link name="left_wheel">
+    <inertial>
+      <mass value="8.439e-05"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="3e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="5e-08"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.016404" radius="0.035867"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.0164037" radius="0.0358674"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="link_0">
+    <inertial>
+      <mass value="0.18"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/meshes/leader-hat-new.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/meshes/leader-hat-new.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="right_wheel">
+    <inertial>
+      <mass value="8.439e-05"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="3e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="5e-08"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.016404" radius="0.035867"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.0164037" radius="0.0358674"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

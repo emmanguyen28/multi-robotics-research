@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><sdf version="1.4">
+  <model name="Leader_ID_26">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://leader_id_26/meshes/Leader_ID_26.dae</uri>
+          <scale>0.142 0.142 0.142</scale></mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

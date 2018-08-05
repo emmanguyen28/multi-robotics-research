@@ -1,0 +1,339 @@
+<?xml version="1.0" ?>
+<robot name="Calumet">
+  
+  <joint name="follower_hat_JOINT_3" type="fixed">
+    <parent link="follower_hat"/>
+    <child link="66"/>
+    <origin rpy="0      -0.00144  0.00122" xyz="0.08271 -0.01786 -0.03314"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="follower_hat_JOINT_4" type="fixed">
+    <parent link="follower_hat"/>
+    <child link="67"/>
+    <origin rpy="0.0067  -0.00416  0.77117" xyz="0.05661  0.04935 -0.03278"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="follower_hat_JOINT_11" type="fixed">
+    <parent link="follower_hat"/>
+    <child link="68"/>
+    <origin rpy="9.63000000e-03  -1.08000000e-03   1.57121000e+00" xyz="-0.01189  0.07833 -0.0321"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="follower_hat_JOINT_6" type="fixed">
+    <parent link="follower_hat"/>
+    <child link="69"/>
+    <origin rpy="0.00685 -0.01786  2.35112" xyz="-0.07622  0.05291 -0.03142"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="follower_hat_JOINT_7" type="fixed">
+    <parent link="follower_hat"/>
+    <child link="70"/>
+    <origin rpy="-0.00019  0.00963 -0.01878" xyz="-0.10862 -0.01902 -0.0313"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="follower_hat_JOINT_8" type="fixed">
+    <parent link="follower_hat"/>
+    <child link="71"/>
+    <origin rpy="-0.00665 -0.01806 -2.37868" xyz="-0.08011 -0.08263 -0.03049"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="follower_hat_JOINT_9" type="fixed">
+    <parent link="follower_hat"/>
+    <child link="72"/>
+    <origin rpy="3.50000000e-04  -1.07000000e-03  -1.56877000e+00" xyz="-0.01004 -0.1106  -0.03164"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="follower_hat_JOINT_10" type="fixed">
+    <parent link="follower_hat"/>
+    <child link="73"/>
+    <origin rpy="-0.00684 -0.0043  -0.78872" xyz="0.05577 -0.0827  -0.03251"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  
+  <joint name="hat_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="follower_hat"/>
+    <origin rpy="1.00000000e-05  -9.63000000e-03  -1.22000000e-03" xyz="0.01141  0.01666  0.06974"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="left_wheel_joint" type="revolute">
+    <parent link="chassis"/>
+    <child link="left_wheel"/>
+    <origin rpy="1.57  0    0" xyz="-0.0015   0.08377  0.035"/>
+    <axis xyz="0.00000000e+00   1.00000000e+00   7.90000000e-04"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="right_wheel_joint" type="revolute">
+    <parent link="chassis"/>
+    <child link="right_wheel"/>
+    <origin rpy="1.57  0    3.14" xyz="-0.0015  -0.08377  0.035"/>
+    <axis xyz="0.00000000e+00   1.00000000e+00   7.90000000e-04"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <link name="chassis">
+    <inertial>
+      <mass value="0.00251652"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.31e-06" ixy="0" ixz="0" iyy="0.00020976" iyz="0" izz="0.00021598"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="-0.0015  0      0.027"/>
+      <geometry>
+        <box size="0.164 0.164 0.014559"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="-0.0015  0      0.027"/>
+      <geometry>
+        <box size="0.164 0.164 0.014559"/>
+      </geometry>
+    </visual>
+	<collision name='front_caster_collision'>
+      <origin rpy="0  0  0" xyz="-0.05199 0 0.012"/>
+      <geometry>
+        <sphere radius="0.012151"/>
+      </geometry>
+    </collision>
+
+    <visual name='front_caster_visual'>
+      <origin rpy="0  0  0" xyz="-0.05199 0 0.012"/>
+      <geometry>
+        <sphere radius="0.012151"/>
+      </geometry>
+    </visual>
+
+	<collision name='back_caster_collision'>
+      <origin rpy="0  0  0" xyz="0.05652 0 0.012"/>
+      <geometry>
+        <sphere radius="0.012151"/>
+      </geometry>
+    </collision>
+    <visual name='back_caster_visual'>
+      <origin rpy="0  0  0" xyz="0.05652 0 0.012"/>
+      <geometry>
+        <sphere radius="0.0121514"/>
+      </geometry>
+    </visual>																																																												
+
+  </link>
+  <link name="66">
+    <inertial>
+      <mass value="0.00001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_66/meshes/Calumet_ID_66.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_66/meshes/Calumet_ID_66.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="67">
+    <inertial>
+      <mass value="0.00001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_67/meshes/Calumet_ID_67.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_67/meshes/Calumet_ID_67.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="68">
+    <inertial>
+      <mass value="0.00001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_68/meshes/Calumet_ID_68.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_68/meshes/Calumet_ID_68.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="69">
+    <inertial>
+      <mass value="0.00001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_69/meshes/Calumet_ID_69.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_69/meshes/Calumet_ID_69.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="70">
+    <inertial>
+      <mass value="0.00001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/Calumet_id_70/meshes/Calumet_ID_70.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_70/meshes/Calumet_ID_70.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="71">
+    <inertial>
+      <mass value="0.00001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_71/meshes/Calumet_ID_71.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_71/meshes/Calumet_ID_71.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="72">
+    <inertial>
+      <mass value="0.00001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_72/meshes/Calumet_ID_72.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_72/meshes/Calumet_ID_72.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="73">
+    <inertial>
+      <mass value="0.00001"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_73/meshes/Calumet_ID_73.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/models/calumet_id_73/meshes/Calumet_ID_73.dae" scale="0.142 0.142 0.142"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <link name="follower_hat">
+    <inertial>
+      <mass value="0.00151652"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/meshes/follower-tagboard_.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/meshes/follower-tagboard.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <link name="left_wheel">
+    <inertial>
+      <mass value="8.439e-05"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="3e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="5e-08"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.016404" radius="0.035867"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.0164037" radius="0.0358674"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="right_wheel">
+    <inertial>
+      <mass value="8.439e-05"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="3e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="5e-08"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.016404" radius="0.035867"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.0164037" radius="0.0358674"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

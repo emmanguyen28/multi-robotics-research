@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<robot name="Romi">
+
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="chassis"/>
+    <child link="left_wheel"/>
+    <origin rpy="1.57  0    0" xyz="-0.0015   0.08377  0.035"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="chassis"/>
+    <child link="right_wheel"/>
+    <origin rpy="1.57 0 0" xyz="-0.0015  -0.08377  0.035"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+
+  <joint name="tagboard_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="follower_tagboard"/>
+    <origin rpy="1.00000000e-05  -9.63000000e-03  -1.22000000e-03" xyz="0.01141  0.01666  0.06974"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+
+  <link name="chassis">
+    <inertial>
+      <mass value="0.00251652"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.31e-06" ixy="0" ixz="0" iyy="0.00020976" iyz="0" izz="0.00021598"/>
+    </inertial>
+    <collision>
+      <origin rpy="0  0  0" xyz="-0.0015  0      0.027"/>
+      <geometry>
+        <box size="0.164 0.164 0.014559"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0  0  0" xyz="-0.0015  0      0.027"/>
+      <geometry>
+        <box size="0.164 0.164 0.014559"/>
+      </geometry>
+    </visual>
+
+	<collision name='front_caster_collision'>
+      <origin rpy="0  0  0" xyz="-0.05199 0 0.012"/>
+      <geometry>
+        <sphere radius="0.012151"/>
+      </geometry>
+    </collision>
+
+    <visual name='front_caster_visual'>
+      <origin rpy="0  0  0" xyz="-0.05199 0 0.012"/>
+      <geometry>
+        <sphere radius="0.012151"/>
+      </geometry>
+    </visual>
+
+	<collision name='back_caster_collision'>
+      <origin rpy="0  0  0" xyz="0.05652 0 0.012"/>
+      <geometry>
+        <sphere radius="0.012151"/>
+      </geometry>
+    </collision>
+    <visual name='back_caster_visual'>
+      <origin rpy="0  0  0" xyz="0.05652 0 0.012"/>
+      <geometry>
+        <sphere radius="0.0121514"/>
+      </geometry>
+    </visual>																																																												
+
+  </link>
+
+  <link name="left_wheel">
+    <inertial>
+      <mass value="8.439e-05"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="3e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="5e-08"/>
+    </inertial>
+    <collision>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.016404" radius="0.035867"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.0164037" radius="0.0358674"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="right_wheel">
+    <inertial>
+      <mass value="8.439e-05"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="3e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="5e-08"/>
+    </inertial>
+    <collision>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.016404" radius="0.035867"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.0164037" radius="0.0358674"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="follower_tagboard">
+    <inertial>
+      <mass value="0.00151652"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/meshes/follower-tagboard.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://robot_description/meshes/follower-tagboard.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

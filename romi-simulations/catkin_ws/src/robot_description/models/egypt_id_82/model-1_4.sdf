@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><sdf version="1.4">
+  <model name="Egypt_ID_82">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://egypt_id_82/meshes/Egypt_ID_82.dae</uri>
+          <scale>0.142 0.142 0.142</scale></mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

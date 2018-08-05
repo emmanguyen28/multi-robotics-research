@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>romi_teleop</name>
+  <version>1.0.0</version>
+  <description>
+    Provides teleoperation control for Romi.
+  </description>
+  <license>BSD</license>
+  <author email="nguye83t@mtholyoke.edu">Emma Nguyen (modified code from original author: Melonee Wise)</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+  <url type="website">http://wiki.ros.org/turtlebot3_teleop</url>
+  <url type="emanual">http://turtlebot3.robotis.com</url>
+  <url type="repository">https://github.com/ROBOTIS-GIT/turtlebot3</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/turtlebot3/issues</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+  <depend>geometry_msgs</depend>
+</package>

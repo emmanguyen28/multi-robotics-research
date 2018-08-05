@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><sdf version="1.4">
+  <model name="Calumet_ID_67">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://calumet_id_67/meshes/Calumet_ID_67.dae</uri>
+          <scale>0.142 0.142 0.142</scale></mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
